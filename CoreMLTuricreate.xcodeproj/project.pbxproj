@@ -14,6 +14,11 @@
 		7036CDB9204C10D000105DED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7036CDB7204C10D000105DED /* LaunchScreen.storyboard */; };
 		7036CDC4204C10D000105DED /* CoreMLTuricreateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036CDC3204C10D000105DED /* CoreMLTuricreateTests.swift */; };
 		7036CDCF204C10D000105DED /* CoreMLTuricreateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036CDCE204C10D000105DED /* CoreMLTuricreateUITests.swift */; };
+		7036CDDD204C10F000105DED /* timeFramedActivityClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7036CDDC204C10F000105DED /* timeFramedActivityClassifier.mlmodel */; };
+		7036CDDF204C110100105DED /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036CDDE204C110100105DED /* Predictor.swift */; };
+		7036CDE6204C181500105DED /* activityClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7036CDE5204C181500105DED /* activityClassifier.mlmodel */; };
+		7036CDE8204C1DBC00105DED /* MetalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036CDE7204C1DBC00105DED /* MetalController.swift */; };
+		7036CDEA204C1E5A00105DED /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7036CDE9204C1E5A00105DED /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		7036CDCA204C10D000105DED /* CoreMLTuricreateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreMLTuricreateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7036CDCE204C10D000105DED /* CoreMLTuricreateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLTuricreateUITests.swift; sourceTree = "<group>"; };
 		7036CDD0204C10D000105DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7036CDDC204C10F000105DED /* timeFramedActivityClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = timeFramedActivityClassifier.mlmodel; sourceTree = "<group>"; };
+		7036CDDE204C110100105DED /* Predictor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
+		7036CDE5204C181500105DED /* activityClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = activityClassifier.mlmodel; sourceTree = "<group>"; };
+		7036CDE7204C1DBC00105DED /* MetalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalController.swift; sourceTree = "<group>"; };
+		7036CDE9204C1E5A00105DED /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +107,13 @@
 		7036CDAD204C10D000105DED /* CoreMLTuricreate */ = {
 			isa = PBXGroup;
 			children = (
+				7036CDE9204C1E5A00105DED /* Shaders.metal */,
+				7036CDDC204C10F000105DED /* timeFramedActivityClassifier.mlmodel */,
+				7036CDE5204C181500105DED /* activityClassifier.mlmodel */,
+				7036CDDE204C110100105DED /* Predictor.swift */,
 				7036CDAE204C10D000105DED /* AppDelegate.swift */,
 				7036CDB0204C10D000105DED /* ViewController.swift */,
+				7036CDE7204C1DBC00105DED /* MetalController.swift */,
 				7036CDB2204C10D000105DED /* Main.storyboard */,
 				7036CDB5204C10D000105DED /* Assets.xcassets */,
 				7036CDB7204C10D000105DED /* LaunchScreen.storyboard */,
@@ -259,7 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7036CDE8204C1DBC00105DED /* MetalController.swift in Sources */,
+				7036CDEA204C1E5A00105DED /* Shaders.metal in Sources */,
 				7036CDB1204C10D000105DED /* ViewController.swift in Sources */,
+				7036CDDD204C10F000105DED /* timeFramedActivityClassifier.mlmodel in Sources */,
+				7036CDE6204C181500105DED /* activityClassifier.mlmodel in Sources */,
+				7036CDDF204C110100105DED /* Predictor.swift in Sources */,
 				7036CDAF204C10D000105DED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X5EL62MCMB;
 				INFOPLIST_FILE = CoreMLTuricreate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.lennartolsen.CoreMLTuricreate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,6 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X5EL62MCMB;
 				INFOPLIST_FILE = CoreMLTuricreate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.lennartolsen.CoreMLTuricreate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
